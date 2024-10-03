@@ -1,32 +1,38 @@
 @extends('admin.adminbase')
-@section('title',"dashboard |")
+
+@section('title',"Dashboard |")
 
 @section('content')
-<div class="flex flex-1 p-5 flex-col">
-                <h2 class="border-l-4 border-orange-700  p-1 font-semibold text-xl">statics</h2>
-                <div class="grid grid-cols-3 gap-5 m-2">
-                    <div class="flex flex-col items-center justify-center bg-slate-300 px-5 py-3 rounded">
-                        <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
-                        <dd class="text-gray-500 dark:text-gray-400">Developers</dd>
-                    </div>
-                    <div class="flex flex-col items-center justify-center bg-slate-300 px-5 py-3 rounded">
-                        <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
-                        <dd class="text-gray-500 dark:text-gray-400">Developers</dd>
-                    </div>
-                    <div class="flex flex-col items-center justify-center bg-slate-300 px-5 py-3 rounded">
-                        <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
-                        <dd class="text-gray-500 dark:text-gray-400">Developers</dd>
-                    </div>
-                
+<div class="flex flex-1 p-5 flex-col gap-5">
+                <div class="flex flex-1">
+                    <h2 class=" border-l-4 border-orange-600 pl-2 text-xl">Statics</h2>
                 </div>
-                <div class="gap-3 mt-3">
-                    <h2 class="border-l-4 border-orange-700  p-1 font-semibold text-xl">Recent Order</h2>
+                <div class="grid grid-cols-3 gap-5">
+                    <div class="flex flex-col items-center justify-center bg-slate-100 px-5 py-3 rounded-xl">
+                        <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Developers</dd>
+                    </div>
+                    <div class="flex flex-col items-center justify-center bg-slate-100 px-5 py-3 rounded-xl">
+                        <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Developers</dd>
+                    </div>
+                    <div class="flex flex-col items-center justify-center bg-slate-100 px-5 py-3 rounded-xl">
+                        <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Developers</dd>
+                    </div>
+                    
                 </div>
-            
+
+                <div class="flex flex-1">
+                    <h2 class=" border-l-4 border-orange-600 pl-2 text-xl">Recent Orders</h2>
+                </div>
+
+                {{-- recent order area --}}
+
 
 
                 <div class="relative overflow-x-auto">
-                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-5">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
                                 <th scope="col" class="px-6 py-3">
@@ -89,5 +95,8 @@
                         </tbody>
                     </table>
                 </div>
+
+
+
             </div>
 @endsection

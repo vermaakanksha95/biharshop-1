@@ -1,33 +1,29 @@
 @extends('layout')
-
 @section('content')
-<div class="flex px-[5%] gap-5">
-    <div class="flex-1">
-        <img src="/image/{{$product->featured_image}}"  class="w-full ">
+<div class=" flex px-[10%] mt-10 gap-5">
+    <div class="flex-[0.4]">
+        <img src="/images/{{$product->featured_image}}" class=" w-full" alt="">
     </div>
-    <div class="flex-1 gap-5 p-5">
-        <h1 class="text-4xl font-semibold ">{{$product->name}}</h1>
-        <p class="text-xl font-light">category: {{$product->category->cat_title}}</p>
-       <div class="flex flex-1 gap-10">
-       <div class="flex divide-x my-5 flex-col">
-            
-            <h1 class="text-4xl">{{$product->discount_price}}</h1>
-            <p class="text-xs text-slate-300 justify-center">all tax included</p>
-        </div>
-        <div class="flex divide-x my-5 flex-col">
-            
-            <h1 class="text-4xl">{{$product->price}}</h1>
-            <p class="text-xs text-green-300 justify-center">10% saved</p>
-        </div>
-       </div>
+    <div class="flex-[1.4] flex flex-col gap-3">
+        <h1 class=" text-2xl font-semibold">{{$product->name}}</h1>
+        <p>Category:{{$product->category->cat_title}}</p>
 
-
-
-        <div  class="flex flex-1 items-start gap-5">
-        <a href="{{route('addToCart',$product->slug)}}" class=" text-xl bg-teal-600 text-white px-3 py-2">Add to cart</a>
-        <a href="" class="bg-orange-600 text-white text-xl px-3 py-2">Buy now</a>
+        <div class="flex divide-x my-3">
+            <div class="flex flex-1 flex-col justify-center gap-3 p-3">
+                <h1 class="text-4xl">₹{{$product->discount_price}}</h1>
+                <p class=" text-xs text-slate-600">All Tax Included</p>
+            </div>
+            <div class="flex flex-1  flex-col justify-center gap-3 p-3">
+                <h1 class="text-xl text-red-500">MRP:<del>₹{{$product->price}}</del></h1>
+                <p class=" text-lg text-green-600 font-semibold">10% Saved</p>
+            </div>
         </div>
 
+        <div class=" flex flex-1 gap-3 items-start">
+            <a href="{{route('addToCart',$product->slug)}}" class=" bg-teal-500 text-white px-3 py-2 text-2xl font-semibold">Add to Cart</a>
+            <a href="" class=" bg-orange-500 text-white px-3 py-2 text-2xl font-semibold">Buy Now</a>
+
+        </div>
     </div>
 </div>
 @endsection

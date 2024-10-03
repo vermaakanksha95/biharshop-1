@@ -1,23 +1,25 @@
 @extends('layout')
-
 @section('content')
 
-<div class="flex flex-1 gap-8 px-[5%] py-5 ">
-    <div class="w-full flex items-center flex-col justify-center">
-        <h2 class=" font-bold text-3xl  mb-4">make payment online $ offline</h2>
+<div class=" flex flex-1 flex-col gap-4 px-[5%] py-5">
+    <div class="w-full">
+        <h2 class=" text-black font-bold text-3xl mt-8">Make Payment Online & Offline</h2>
+    </div>
 
-        <div class="flex flex-1 gap-5">
-
-            <div class="flex flex-col gap-2">
-                <label for="payment_method" class="text-black font-bold text-sm">payment method</label>
-                <select name="payment_method" id="payment_method" class="border-2 border-gray-300 rounded px-3 py-2">
-                    <option value="">select payment method</option>
-                    <option value="online">online payment</option>
-                    <option value="offline"> ofline payment</option>
-                </select>
-            </div>
+    <div class="flex flex-1 gap-5">
+       <div class=" w-3/12">
+        <div class="flex flex-col gap-2">
+            <label for="payment_method" class=" text-slate-500 font-semibold text-sm">Payment Method</label>
+            <select name="payment_method" id="payment_method" class="border-2 border-gray-300 rounded">
+                <option value="" selected disabled>Select Payment Method</option>
+                <option value="online">Online Payment</option>
+                <option value="offline">Offline Payment</option>
+            </select>
         </div>
 
+       </div>
     </div>
+
+
 </div>
 @endsection

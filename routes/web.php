@@ -10,7 +10,7 @@ use App\Http\Controllers\ProductController;
 use App\Models\Address;
 use Illuminate\Support\Facades\Route;
 
-//public / guest routes
+
 Route::get("/", [HomeController::class, "index"])->name('homepage');
 
 
